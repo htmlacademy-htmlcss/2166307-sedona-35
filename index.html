@@ -9,7 +9,7 @@
     <header class="page-header">
      <nav class="navigation">
 
-      <img class="logo" src="" alt="Логотип города Седона">
+      <a class="logo-link"><img class="logo" src="" alt="Логотип города Седона"></a>
 
       <ul class="navigation-list">
          <li class="navigation-items">
@@ -52,6 +52,52 @@
 
 
   <footer>
+
+   <section class="main-footer-subscription">
+    <h2 class="footer-subscription">Подпишитесь на рассылку</h2>
+      <span>
+      Только полезная информация и никакого спама, честное бойскаутское!
+      </span>
+
+      <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+         <label class="subscription-email">Email</label>
+           <input class="field" placeholder="Ваш e-mail" type="email" name="subscription-email" id="subscription-email" required>
+             <button class="button subscription-button" type="submit">
+               <span class="vissually-hidden">Отправить</span>
+             </button>
+      </form>
+   </section>
+
+   <section class="footer-social">
+     <h2 class="visually-hidden">Город Седона в социальных сетях</h2>
+      <ul class="footer-social-list">
+        <li class="footer-social-item">
+         <a class="social-network-logo" href="#">
+            <span class="visually-hidden">ВКонтакте</span>
+         </a>
+        </li>
+        <li class="footer-social-item">
+         <a class="social-network-logo" href="#">
+            <span class="visually-hidden">Телеграм</span>
+         </a>
+        </li>
+        <li class="footer-social-item">
+         <a class="social-network-logo" href="#">
+            <span class="visually-hidden">Ютуб</span>
+         </a>
+        </li>
+      </ul>
+   </section>
+
+   <section class="footer-phone">
+      <h2 class="visually-hidden">Телефон города Седона</h2>
+      <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+   </section>
+
+   <section class="footer-partners-logo">
+      <h2 class="visually-hidden">Логотип партнера - компании HTML Academy</h2>
+      <a class="logo-link" href="https://htmlacademy.ru"><img class="html-academy-logo" src="" alt="Логотип компании HTML Academy"></a>
+   </section>
 
   </footer>
   </body>
