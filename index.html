@@ -30,19 +30,19 @@
       <ul class="navigation-list navigation-user">
          <li class="navigation-items">
             <span class="visually-hidden">
-              <a class="navigation-link" href="#">Поиск</a>
+              <a class="navigation-link search" href="#">Поиск</a>
             </span>
             <!---  ↑ ↑ ↑ ↑ ↑ ↑ Иконку Лупы  отобразим средствами CSS --->
          </li>
          <li class="navigation-items">
               <span class="visually-hidden">
-                 <a class="navigation-link" href="#">Лайк</a>
+                 <a class="navigation-link heard" href="#">Лайк</a>
               </span>
             <!---  ↑ ↑ ↑ ↑ ↑ ↑ Сердце и Количество ЛАЙКОВ в кружке над иконкой сердца отобразим средствами CSS и JavaScript  -->
          </li>
          <li class="navigation-items">
           <span class="visually-hidden">
-                 <a class="navigation-link" href="#">Забронировать отель</a>
+                 <a class="navigation-link wish" href="#">Хочу сюда!</a>
           </span>
          </li>
       </ul>
@@ -103,11 +103,11 @@
        <ul class="recommendations-list">
          <li class="recommendations-item">
              <h3 class="recommendations-title">Жильё</h3>
-             <p class="recommendations-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+             <p class="recommendations-description motel">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
          </li>
          <li class="recommendations-item">
              <h3 class="recommendations-title">Еда</h3>
-             <p class="recommendations-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+             <p class="recommendations-description burger">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
          </li>
          <li class="recommendations-item">
              <h3 class="recommendations-title">Сувениры</h3>
@@ -126,14 +126,14 @@
 
      <section class="illustrated-subscription">
        <h2 class="subscription">Подпишитесь на рассылку</h2>
-       <span>
+       <span class="subscription-benefit">
          Только полезная информация и никакого спама, честное бойскаутское!
        </span>
        <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="subscription-email">Email</label>
+          <label class="visually-hidden">Email</label>
           <input class="field" placeholder="Ваш e-mail" type="email" name="subscription-email" id="subscription-email" required>
           <button class="button subscription-button" type="submit">
-            <span class="vissually-hidden">Отправить</span>
+            <span class="button-label">Подписаться</span>
           </button>
        </form>
       </section>
