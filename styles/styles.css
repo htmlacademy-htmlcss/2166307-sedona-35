@@ -132,3 +132,12 @@ body {
   color:#000000;
   background-color: #ffffff;
 }
+
+.recommendations {
+  display: block;
+  color:#ffffff;
+  background-color: #82B3D3;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
