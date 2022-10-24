@@ -10,11 +10,14 @@
     <!--================================== H E A D E R ================================================================================== -->
 
     <header class="page-header">
+
+
+     <nav class="navigation">
+
       <a class="logo-link">
         <img class="sedona-logo" src="images/sedona-logo.svg" width="140" height="70.05" alt="Логотип города Седона.">
       </a>
 
-     <nav class="navigation">
       <ul class="navigation-list">
          <li class="navigation-items">
           <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
@@ -27,7 +30,7 @@
          </li>
       </ul>
 
-      <ul class="navigation-list navigation-user">
+      <ul class="navigation-user">
          <li class="navigation-items">
             <span class="visually-hidden">
               <a class="navigation-link search" href="#">Поиск</a>
@@ -68,13 +71,16 @@
      </section>
 
       <!--  ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ------------БЛОК    A D V A N T A G E S ------------------ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓   -->
-     <sdiv class="advantages-illustrated">
-        <span class="advantages-title illustrated">Настоящий городок</span>
-        <p class="advantages-description illustrated">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-        <img class="sedona-town-view" src="images/sedona-streets.jpg" width="800" height="384" alt="Улицы города Седона.">
-     </div>
-
      <section class="advantages">
+        <div class="advantages-illustrated-town">
+          <div class="advantages-comment">
+            <span class="advantages-title illustrated">Настоящий городок</span>
+            <p class="advantages-description illustrated">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+          </div>
+          <img class="sedona-town-view" src="images/sedona-streets.jpg" width="800" height="384" alt="Улицы города Седона.">
+        </div>
+
+
         <div class="advantages-list">
           <div class="advantages-item">
            <span class="advantages-title">Небольшая площадь</span>
@@ -89,13 +95,15 @@
             <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
           </div>
         </div>
-      </section>
 
-      <div class="advantages-illustrated">
-       <span class="advantages-title illustrated">Там есть мост дьявола</span>
-       <p class="advantages-description illustrated">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-       <img class="sedona-town-bridge" src="images/devils-bridge.jpg" width="800" height="384" alt="Мост дьявола в окрестностях города Седона.">
-      </div>
+        <div class="advantages-illustrated-bridge">
+          <img class="sedona-town-bridge" src="images/devils-bridge.jpg" width="800" height="384" alt="Мост дьявола в окрестностях города Седона.">
+          <div class="advantages-comment">
+           <span class="advantages-title illustrated">Там есть мост дьявола</span>
+           <p class="advantages-description illustrated">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+         </div>
+        </div>
+      </section>
       <!--  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ------------ БЛОК     A D V A N T A G E S ----------------- ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑   -->
 
 
@@ -151,6 +159,7 @@
     <!-- ========================================== F O O T E R ======================================================================= -->
 
     <footer class="footer-index">
+
       <div class="footer-social">
          <h2 class="visually-hidden">Город Седона в социальных сетях</h2>
          <span class="visually-hidden">Перейти в ВКонтакте</span>
@@ -166,18 +175,21 @@
            <img class="social-networks" src="images/youtube-icon.svg" width="22" height="17" alt="Перейти в Ютуб.">
          </a>
       </div>
+
       <div class="footer-contacts">
          <h2 class="visually-hidden">Телефон города Седона</h2>
          <a class="footer-contacts-phone" href="tel:+78128121212">
            +7 (812) 812-12-12
          </a>
-        </div>
-        <div class="partner-logo">
+      </div>
+
+      <div class="partner-logo">
          <h2 class="visually-hidden">Логотип партнера - компании HTML Academy</h2>
          <a class="partner-logo-link" href="https://htmlacademy.ru">
            <img class="html-academy-logo" src="images/html-academy-logo.svg" width="115" height="33" alt="Логотип партнера - компании HTML Academy.">
          </a>
-        </div>
+      </div>
+
     </footer>
   </body>
 </html>
