@@ -10,160 +10,174 @@
     <!--================================== H E A D E R ================================================================================== -->
 
     <header class="page-header">
+
+
       <nav class="navigation">
-        <a class="logo-link">
-          <img class="sedona-logo" src="images/sedona-logo.svg" width="140" height="70.05" alt="Логотип города Седона.">
-        </a>
-        <ul class="navigation-list">
-           <li class="navigation-items">
-            <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
-           </li>
-           <li class="navigation-items">
-            <a class="navigation-link" href="#">О Седоне</a>
-           </li>
-           <li class="navigation-items">
-            <a class="navigation-link" href="catalog.html">Гостиницы</a>
-           </li>
-        </ul>
 
-        <ul class="navigation-list navigation-user">
-           <li class="navigation-items">
-              <span class="visually-hidden">
-                <a class="navigation-link search" href="#">Поиск</a>
-              </span>
-              <!---  ↑ ↑ ↑ ↑ ↑ ↑ Иконку Лупы  отобразим средствами CSS --->
-           </li>
-           <li class="navigation-items">
-                <span class="visually-hidden">
-                   <a class="navigation-link heart" href="#">Лайк</a>
-                </span>
-              <!---  ↑ ↑ ↑ ↑ ↑ ↑ Сердце и Количество ЛАЙКОВ в кружке над иконкой сердца отобразим средствами CSS и JavaScript  -->
-           </li>
-           <li class="navigation-items">
-                   <a class="navigation-link wish" href="#">Хочу сюда!</a>
-           </li>
-        </ul>
+       <a class="logo-link">
+         <img class="sedona-logo" src="images/sedona-logo.svg" width="140" height="70.05" alt="Логотип города Седона.">
+       </a>
 
-       </nav>
-    </header>
+       <ul class="navigation-list">
+          <li class="navigation-items">
+           <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
+          </li>
+          <li class="navigation-items">
+           <a class="navigation-link" href="#">О Седоне</a>
+          </li>
+          <li class="navigation-items">
+           <a class="navigation-link" href="catalog.html">Гостиницы</a>
+          </li>
+       </ul>
+
+       <ul class="navigation-user">
+          <li class="navigation-items">
+             <span class="visually-hidden">
+               <a class="navigation-link search" href="#">Поиск</a>
+             </span>
+             <!---  ↑ ↑ ↑ ↑ ↑ ↑ Иконку Лупы  отобразим средствами CSS --->
+          </li>
+          <li class="navigation-items">
+               <span class="visually-hidden">
+                  <a class="navigation-link heart" href="#">Лайк</a>
+               </span>
+             <!---  ↑ ↑ ↑ ↑ ↑ ↑ Сердце и Количество ЛАЙКОВ в кружке над иконкой сердца отобразим средствами CSS и JavaScript  -->
+          </li>
+          <li class="navigation-items">
+                  <a class="navigation-link wish" href="#">Хочу сюда!</a>
+          </li>
+       </ul>
+
+      </nav>
+     </header>
 
     <!-- ==================================== M A I N ==================================================================================  -->
 
-    <main class="main-inner">
-      <section class="filter-block">
-       <section class="inner-header">
-          <h1 class="inner-header-title">Гостиницы Седоны</h1>
-          <ul class="breadcrumbs">
-            <li class="breadcrumbs-item">
-               <a class="breadcrumbs-link" href="index.html">
+
+    <!----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓    Breadcrumbs  ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ --------------------------------------------------->
+      <main class="main-inner">
+
+       <section class="filter-block">
+         <section class="inner-header">
+            <h1 class="inner-header-title">Гостиницы Седоны</h1>
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs-item">
+                <a class="breadcrumbs-link" href="index.html">
                  ..
-                 <!-- ↑ ↑ ↑ ↑ ↑ ↑ --- Иконку Домика покажем посредством CSS  ...-->
-               </a>
-            </li>
-            <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link" href="index.html">Гостиницы</a>
-            </li>
-          </ul>
-        </section>
 
-       <section class="filters">
-         <h2 class="visually-hidden">Список отелей с фильтрами</h2>
-         <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="get">
+                </a>
+              </li>
+             <li class="breadcrumbs-item">
+                <a class="breadcrumbs-link" href="index.html">Гостиницы</a>
+             </li>
+           </ul>
+         </section>
+         <!-------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑  Breadcrumbs  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑------------------------------------------------------>
 
-          <div class="infrastructure-selection">
-            <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Инфраструктура:</legend>
-              <label class="control">
-                <input class="control-input" type="checkbox" name="pool" checked>
-                Бассейн
-              </label>
-              <br>
-              <label class="control">
-                <input class="control-input" type="checkbox" name="parking" checked>
-                Парковка
-              </label>
-              <br>
-              <label class="control">
-                <input class="control-input" type="checkbox" name="wifi">
-                Wi-Fi
-              </label>
-             </fieldset>
+
+         <!----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓    БЛОК ФИЛЬРОВ КАТАЛОГА (ФОРМА)  ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ------------------------------------->
+         <section class="filters">
+           <h2 class="visually-hidden">Список отелей с фильтрами</h2>
+           <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="get">
+             <div class="infrastructure-selection">
+               <fieldset class="catalog-filter-group">
+                 <legend class="catalog-filter-title">Инфраструктура:</legend>
+                 <label class="control">
+                   <input class="control-input" type="checkbox" name="pool" checked>
+                   Бассейн
+                 </label>
+                 <br>
+                 <label class="control">
+                   <input class="control-input" type="checkbox" name="parking" checked>
+                   Парковка
+                 </label>
+                 <br>
+                 <label class="control">
+                   <input class="control-input" type="checkbox" name="wifi">
+                   Wi-Fi
+                 </label>
+               </fieldset>
+             </div>
+
+             <div class="accomodation-type">
+               <fieldset class="catalog-filter-group">
+                 <legend class="catalog-filter-title">Тип Жилья:</legend>
+                 <label class="control">
+                  <input class="control-input" type="radio" name="accommodation-type" value="hotel" checked>
+                   Гостиница
+                 </label>
+                 <br>
+                 <label class="control">
+                   <input class="control-input" type="radio" name="accommodation-type" value="motel">
+                   Мотель
+                 </label>
+                 <br>
+                 <label class="control">
+                   <input class="control-input" type="radio" name="accommodation-type" value="apartments">
+                   Апартаменты
+                 </label>
+               </fieldset>
+             </div>
+
+             <!----↓ ↓ ↓ ↓ ↓ ↓ ↓  Double Slider  задающий диапазон цены ..-->
+             <div class="price-slider">
+               <fieldset class="catalog-filter-group">
+                 <legend class="catalog-filter-title">Стоимость,₽:</legend>
+                  <div class="slider-container">
+                    <input class="slider-from" type="number" placeholder="0"   >
+                    <input class="slider-to" type="number"  placeholder="9000" >
+                    <input class="slider" type="range" min="0" max="15000" value="9000"  >
+                 </div>
+               </fieldset>
+             </div>
+             <!---↑ ↑ ↑ ↑ ↑ ↑ ↑  Double Slider  задающий диапазон цены ..-->
+
+             <div class="submit-reset-buttons">
+               <button class="button-submit" type="submit">Применить</button>
+               <br>
+               <button class="button-reset" type="reset">Сбросить</button>
+             </div>
+            </form>
+         </section>
+       </section>
+       <!-----  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑     БЛОК ФИЛЬРОВ КАТАЛОГА (ФОРМА)    ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ -------------------------------->
+
+
+
+       <!----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓    ЗАГОЛОВОК КАТАЛОГА ОТЕЛЕЙ с опциями отображения  ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ --------------------->
+       <section class="view-options">
+          <div class="amount-of-hotels">
+            Найдено гостиниц: 38
           </div>
 
-          <div class="accomodation-type">
-           <fieldset class="catalog-filter-group">
-             <legend class="catalog-filter-title">Тип Жилья:</legend>
+          <div class="sort-by-type">
+            <select class="select-control" aria-label="Сортировка">
+              <option value="popular">Сначала дешевые</option>
+              <option value="cheap">Сначала популярные</option>
+              <option value="expensive">Сначала дорогие</option>
+            </select>
+          </div>
 
-             <label class="control">
-               <input class="control-input" type="radio" name="accommodation-type" value="hotel" checked>
-               Гостиница
-             </label>
-             <br>
-             <label class="control">
-                <input class="control-input" type="radio" name="accommodation-type" value="motel">
-                Мотель
-             </label>
-             <br>
-             <label class="control">
-                <input class="control-input" type="radio" name="accommodation-type" value="apartments">
-                Апартаменты
-              </label>
-           </fieldset>
-         </div>
+          <div class="view-type">
+            <a href="#" class="button button-light">
+             <span class="visually-hidden">Показать карточки</span>
+            </a>
+            <a href="#" class="button">
+              <span class="visually-hidden">Показать по отдельности</span>
+            </a>
+            <a href="#" class="button">
+              <span class="visually-hidden">Показать список</span>
+            </a>
+          </div>
 
-         <!----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ здесь будет Double Slider  задающий диапазон цены; оживим его после изучения JavaScript..----->
-         <div class="price-slider">
-             <fieldset class="catalog-filter-group">
-             <legend class="catalog-filter-title">Стоимость,₽:</legend>
-              <div class="slider-container">
-                <input class="slider-from" type="number" placeholder="0"   >
-                <input class="slider-to" type="number"  placeholder="9000" >
-                <input class="slider" type="range" min="0" max="15000" value="9000"  >
-             </div>
-           </fieldset>
-         </div>
-         <!---↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ здесь будет Double Slider  задающий диапазон цены; оживим его после изучения JavaScript..----->
-
-         <div class="submit-reset-buttons">
-
-            <button class="button-submit" type="submit">Применить</button>
-            <br>
-            <button class="button-reset" type="reset">Сбросить</button>
-         </div>
-         </form>
-       </section>
-      </section>
-
-      <section class="view-options">
-        <div class="amount-of-hotels">
-          Найдено гостиниц: 38
-        </div>
-
-        <div class="sort-by-type">
-          <select class="select-control" aria-label="Сортировка">
-            <option value="popular">Сначала дешевые</option>
-            <option value="cheap">Сначала популярные</option>
-            <option value="expensive">Сначала дорогие</option>
-          </select>
-        </div>
-         <!----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓    Иконки-кнопки меняющие вывод отобразим посредством CSS ------>
-        <div class="view-type">
-          <a href="#" class="button button-light">
-            <span class="visually-hidden">Показать карточки</span>
-          </a>
-          <a href="#" class="button">
-            <span class="visually-hidden">Показать по отдельности</span>
-          </a>
-          <a href="#" class="button">
-            <span class="visually-hidden">Показать список</span>
-          </a>
-        </div>
-        <!---  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑     Иконки-кнопки меняющие вывод отобразим посредством CSS  ---->
-      </section>
+        </section>
+       <!---  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑     ЗАГОЛОВОК КАТАЛОГА ОТЕЛЕЙ с опциями отображения  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ---------------->
 
 
-     <section class="catalog">
-       <!-- ===================================== Карточки отелей..==================================================================     -->
+
+       <!-- ===============↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ============= Карточки отелей..==================↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ==================================-->
+       <section class="catalog">
+
        <ul class="hotel-list">
          <li class="hotel-card">
            <a class="hotel-card-link" href="#">
@@ -246,7 +260,7 @@
         </li>
        </ul>
      </section>
-      <!---↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑  Карточки отелей..------------------------------------->
+      <!-- =============↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑============== КАРТОЧКИ ОТЕЛЕЙ ==================================================================+++-->
 
       <!----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ Пагинация..------------------------------------------->
        <section class="pagination-links">

@@ -15,6 +15,27 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.main-page {
+  flex-grow: 1;  /* делаем MAIN жадным через свойство flex-grow; реализуем sticky-footer */
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -22,16 +43,6 @@
   height: 1px;
   margin: -1px;
 }
-
-body {
-  font-family: "PT Sans", sans-serif;
-  font-size: 18px;
-  line-height: 21px;
-  margin: 0;
-  background-color: #ffffff;
-  color: #000000;
-}
-
 
 /*-------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ----БЛОК НАВИГАЦИИ -----------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -----*/
 .page-header {
@@ -106,17 +117,35 @@ margin-right: 30px;
   color: #000000;
 }
 
+
+/*-------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -------- HERO БЛОК -----------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ----------*/
+
 .wellcome {
   display: flex;
+  flex-direction: column;
   width: 1200px;
   height: 485px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   background-image: url("../images/bg-hero.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 1200px 485px;
 }
+
+.trimming-line {
+  display: flex;
+  width: 1200px;
+  height: 57px;
+  background-image: url("../images/trimming-line.svg");
+  background-size: 1200px 57px;
+  color: #ffffff;
+  align-items: flex-end;
+  padding: 0;
+}
+
+
+/*-------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ --------- HERO БЛОК ----------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-----------*/
+
 
 .sedona-area {
   display: block;
@@ -172,13 +201,13 @@ margin-right: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  height: 160px;
   text-align: center;
   padding-top: 92px;
   padding-left: 85px;
   padding-right: 85px;
   padding-bottom: 111px;
-  margin: 0;
+  margin: 0 auto;
 
 }
 
@@ -186,8 +215,7 @@ margin-right: 30px;
 .advantages-list {
   display: flex;
   width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   background-color: #ffffff;
   color:#000000;
   align-items: center;
@@ -196,8 +224,7 @@ margin-right: 30px;
 .advantages-illustrated-bridge {
   display: flex;
   width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   color:#ffffff;
   background-color: #82B3D3;
 }
@@ -238,9 +265,7 @@ margin-right: 30px;
   display: flex;
   width: 1200px;
   height: 384px;
-  margin-left: auto;
-  margin-right: auto;
-  /*justify-content: space-around;*/
+  margin: 0 auto;
   color:#000000;
   align-items: center;
 }
@@ -276,8 +301,7 @@ margin-right: 30px;
   justify-content: center;
   max-width: 1200px;
   height: 406px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   text-align: center;
   background-color: #ffffff;
   color:#000000;
@@ -318,8 +342,7 @@ margin-right: 30px;
   justify-content: center;
   width: 1200px;
   height: 414.86px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   background-image: url("../images/bg-mail-subscription.jpg");
   background-repeat: no-repeat;
   background-position: center top;
@@ -408,8 +431,7 @@ margin-right: 30px;
 .footer-index {
   display: flex;
   width: 1060px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 30px;
   text-align: center;
@@ -471,6 +493,28 @@ margin-right: 30px;
   color: #ffffff;
 }
 
+/*-----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓-------------------БЛОК ФИЛЬТРОВ КАТАЛОГА------------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓--------------------*/
+
+
+.filter-block {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 1200px;
+  height: 412px;
+  background-image: url("../images/bg-catalog.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 1200px 412px;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
 .inner-header-title {
   text-align: center;
   font-size: 60px;
@@ -479,20 +523,9 @@ margin-right: 30px;
   color: #ffffff;
 }
 
-.filter-block {
-  display: block;
-  background-image: url("../images/bg-catalog.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 1200px 412px;
-}
 
-  .filters {
-    display: block;
-    max-width: 1060px;
-    margin-left: auto;
-    margin-right: auto;
-}
+
+
 
 .infrastructure-selection {
   display: inline-block;
@@ -622,10 +655,6 @@ display: inline-block;
 }
 /*-----↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-----------------Пагинация в каталоге ---------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-----------------------*/
 
-
-/*-----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓---------------Подписка в catalog.html без фона--------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓------------------------*/
-
-/*-----↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑---------------Подписка в catalog.html без фона--------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑------------------------*/
 
 
 /*-----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓---------------Карточки отелей catalog.html без фона--------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓------------------------*/
