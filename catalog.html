@@ -20,13 +20,13 @@
 
         <ul class="navigation-list">
           <li class="navigation-items">
-            <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
+            <a class="navigation-link" href="index.html">Главная</a>
           </li>
           <li class="navigation-items">
             <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-items">
-            <a class="navigation-link" href="catalog.html">Гостиницы</a>
+            <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
 
@@ -150,7 +150,8 @@
 
 
        <!----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓    ЗАГОЛОВОК КАТАЛОГА ОТЕЛЕЙ с опциями отображения  ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ --------------------->
-       <section class="view-options">
+      <div class="catalog-container">
+        <section class="view-options">
           <div class="amount-of-hotels">
             Найдено гостиниц: 38
           </div>
@@ -165,7 +166,7 @@
 
           <div class="view-type">
             <a href="#" class="view-type-cards">
-             <span class="visually-hidden">Показать карточки</span>
+              <span class="visually-hidden">Показать карточки</span>
             </a>
             <a href="#" class="view-type-single">
               <span class="visually-hidden">Показать по отдельности</span>
@@ -176,150 +177,167 @@
           </div>
 
         </section>
-       <!---  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑     ЗАГОЛОВОК КАТАЛОГА ОТЕЛЕЙ с опциями отображения  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ---------------->
+        <!---  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑     ЗАГОЛОВОК КАТАЛОГА ОТЕЛЕЙ с опциями отображения  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ---------------->
 
 
 
-       <!-- ===============↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ============= Карточки отелей..==================↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ==================================-->
-       <section class="catalog">
+        <!-- ===============↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ============= Карточки отелей..==================↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ==================================-->
+        <section class="catalog">
 
-       <ul class="hotel-list">
-         <li class="hotel-card">
-           <a class="hotel-card-link" href="#">
-             <img class="hotel-card-image" src="images/catalog/hotel-1.jpg" width="300" height="212" alt="Виды вокруг отеля Amara Resort & Spa.">
-             <div class="hotel-card-title">Amara Resort & Spa</div>
-           </a>
-           <div class="type-to-price">
-             <span class="hotel-card-type">Гостиница</span><span class="hotel-card-price">&nbsp; От 4000 ₽</span>
-           </div>
-           <div class="card-action">
-            <a class="hotel-card-details" href="#">Подробнее</a>
-            <a class="hotel-card-favourites" href="#">В Избранное</a>
-          </div>
-           <div class="card-rate">
-             <div class="stars"> <!---  ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓   4 звезды; звезды рисуем средствами CSS  -->
-               <div class="star"></div>
-               <div class="star"></div>
-               <div class="star"></div>
-               <div class="star"></div>
-             </div>            <!---  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑    4 звезды; звезды рисуем средствами CSS   -->
-             <span class="hotel-card-rating">Рейтинг: 8,5</span>
-           </div>
-         </li>
+          <ul class="hotel-list">
+            <li class="hotel-card">
+              <a class="hotel-card-link" href="#">
+                <img class="hotel-card-image" src="images/catalog/hotel-1.jpg" width="300" height="212"
+                  alt="Виды вокруг отеля Amara Resort & Spa.">
+                <div class="hotel-card-title">Amara Resort & Spa</div>
+              </a>
+              <div class="type-to-price">
+                <span class="hotel-card-type">Гостиница</span><span class="hotel-card-price">&nbsp; От 4000 ₽</span>
+              </div>
+              <div class="card-action">
+                <a class="hotel-card-details" href="#">Подробнее</a>
+                <a class="hotel-card-favourites" href="#">В Избранное</a>
+              </div>
+              <div class="card-rate">
+                <div class="stars">
+                  <!---  ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓   4 звезды; звезды рисуем средствами CSS  -->
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                </div>
+                <!---  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑    4 звезды; звезды рисуем средствами CSS   -->
+                <span class="hotel-card-rating">Рейтинг: 8,5</span>
+              </div>
+            </li>
 
-         <li class="hotel-card">
-           <a class="hotel-card-link" href="#">
-            <img class="hotel-card-image" src="images/catalog/hotel-2.jpg" width="300" height="212" alt="Виды вокруг отеля Villas at Poco Diablo.">
-            <div class="hotel-card-title">Villas at Poco Diablo</div>
-           </a>
-           <div class="type-to-price">
-             <span class="hotel-card-type">Гостиница</span><span class="hotel-card-price">&nbsp; От 5000 ₽</span>
-           </div>
-           <div class="card-action">
-              <a class="hotel-card-details" href="#">Подробнее</a>
-              <a class="hotel-card-favourites" href="#">В Избранном</a>
-           </div>
-           <div class="card-rate">
-             <div class="stars"> <!---  ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓   4 звезды; звезды рисуем средствами CSS  -->
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-                <div class="star"></div>
-              </div>            <!---  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑   4 звезды; звезды рисуем средствами CSS    -->
-             <span class="hotel-card-rating">Рейтинг: 9,2</span>
-           </div>
-         </li>
+            <li class="hotel-card">
+              <a class="hotel-card-link" href="#">
+                <img class="hotel-card-image" src="images/catalog/hotel-2.jpg" width="300" height="212"
+                  alt="Виды вокруг отеля Villas at Poco Diablo.">
+                <div class="hotel-card-title">Villas at Poco Diablo</div>
+              </a>
+              <div class="type-to-price">
+                <span class="hotel-card-type">Гостиница</span><span class="hotel-card-price">&nbsp; От 5000 ₽</span>
+              </div>
+              <div class="card-action">
+                <a class="hotel-card-details" href="#">Подробнее</a>
+                <a class="hotel-card-favourites" href="#">В Избранном</a>
+              </div>
+              <div class="card-rate">
+                <div class="stars">
+                  <!---  ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓   4 звезды; звезды рисуем средствами CSS  -->
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                </div>
+                <!---  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑   4 звезды; звезды рисуем средствами CSS    -->
+                <span class="hotel-card-rating">Рейтинг: 9,2</span>
+              </div>
+            </li>
 
-         <li class="hotel-card">
-           <a class="hotel-card-link" href="#">
-             <img class="hotel-card-image" src="images/catalog/hotel-3.jpg" width="300" height="212" alt="Виды вокруг отеля Desert Quail Inn.">
-             <div class="hotel-card-title">Desert Quail Inn</div>
-           </a>
-           <div class="type-to-price">
-             <span class="hotel-card-type">Гостиница</span><span class="hotel-card-price">&nbsp; От 2500 ₽</span>
-           </div>
-           <div class="card-action">
-             <a class="hotel-card-details" href="#">Подробнее</a>
-             <a class="hotel-card-favourites" href="#">В Избранное</a>
-           </div>
-           <div class="card-rate">
-              <div class="stars"> <!---  ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓   3 звезды; звезды рисуем средствами CSS  -->
-              <div class="star"></div>
-              <div class="star"></div>
-              <div class="star"></div>
-            </div>              <!---  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑   3 звезды; звезды рисуем средствами CSS  -->
-            <span class="hotel-card-rating">Рейтинг: 6,9</span>
-          </div>
-        </li>
-        <li class="hotel-card">
-           <a class="hotel-card-link" href="#">
-             <img class="hotel-card-image" src="images/catalog/hotel-4.jpg" width="300" height="212" alt="Виды вокруг отеля GreenTree Inn.">
-             <div class="hotel-card-title">GreenTree Inn</div>
-           </a>
-           <div class="type-to-price">
-             <span class="hotel-card-type">Гостиница</span><span class="hotel-card-price">&nbsp; От 1500 ₽</span>
-           </div>
-          <div class="card-action">
-             <a class="hotel-card-details" href="#">Подробнее</a>
-             <a class="hotel-card-favourites" href="#">В Избранное</a>
-          </div>
-          <div class="card-rate">
-            <div class="stars"> <!---  ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓  2 звезды; звезды рисуем средствами CSS  -->
-              <div class="star"></div>
-              <div class="star"></div>
-            </div>              <!---  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑   2 звезды; звезды рисуем средствами CSS  -->
-            <span class="hotel-card-rating">Рейтинг: 5,0</span>
-          </div>
-        </li>
-       </ul>
-     </section>
-      <!-- =============↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑============== КАРТОЧКИ ОТЕЛЕЙ ==================================================================+++-->
+            <li class="hotel-card">
+              <a class="hotel-card-link" href="#">
+                <img class="hotel-card-image" src="images/catalog/hotel-3.jpg" width="300" height="212"
+                  alt="Виды вокруг отеля Desert Quail Inn.">
+                <div class="hotel-card-title">Desert Quail Inn</div>
+              </a>
+              <div class="type-to-price">
+                <span class="hotel-card-type">Гостиница</span><span class="hotel-card-price">&nbsp; От 2500 ₽</span>
+              </div>
+              <div class="card-action">
+                <a class="hotel-card-details" href="#">Подробнее</a>
+                <a class="hotel-card-favourites" href="#">В Избранное</a>
+              </div>
+              <div class="card-rate">
+                <div class="stars">
+                  <!---  ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓   3 звезды; звезды рисуем средствами CSS  -->
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                </div>
+                <!---  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑   3 звезды; звезды рисуем средствами CSS  -->
+                <span class="hotel-card-rating">Рейтинг: 6,9</span>
+              </div>
+            </li>
+            <li class="hotel-card">
+              <a class="hotel-card-link" href="#">
+                <img class="hotel-card-image" src="images/catalog/hotel-4.jpg" width="300" height="212"
+                  alt="Виды вокруг отеля GreenTree Inn.">
+                <div class="hotel-card-title">GreenTree Inn</div>
+              </a>
+              <div class="type-to-price">
+                <span class="hotel-card-type">Гостиница</span><span class="hotel-card-price">&nbsp; От 1500 ₽</span>
+              </div>
+              <div class="card-action">
+                <a class="hotel-card-details" href="#">Подробнее</a>
+                <a class="hotel-card-favourites" href="#">В Избранное</a>
+              </div>
+              <div class="card-rate">
+                <div class="stars">
+                  <!---  ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓  2 звезды; звезды рисуем средствами CSS  -->
+                  <div class="star"></div>
+                  <div class="star"></div>
+                </div>
+                <!---  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑   2 звезды; звезды рисуем средствами CSS  -->
+                <span class="hotel-card-rating">Рейтинг: 5,0</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <!-- =============↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑============== КАРТОЧКИ ОТЕЛЕЙ ==================================================================+++-->
 
-      <!----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ Пагинация..------------------------------------------->
-       <section class="pagination-links">
-       <ul class="pagination">
-         <li class="pagination-item">
-           <a class="pagination-link pagination-current">1</a>
-         </li>
-         <li class="pagination-item">
-          <a class="pagination-link" href="#">2</a>
-         </li>
-         <li class="pagination-item">
-          <a class="pagination-link" href="#">3</a>
-         </li>
-         <li class="pagination-item">
-          <a class="pagination-link" href="#">4</a>
-         </li>
-         <li class="pagination-item">
-           <a class="pagination-link pagination-next" href="#">
-             <span class="visually-hidden">Следующая страница</span>...
-           </a>
-         </li>
-         <li class="pagination-item">
-          <a class="pagination-link" href="#">10</a>
-         </li>
-         </ul>
-     </section>
-     <!-----↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑  Пагинация..------------------------------------------->
+        <!----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ Пагинация..------------------------------------------->
+        <section class="pagination-links">
+          <ul class="pagination">
+            <li class="pagination-item">
+              <a class="pagination-link pagination-current">1</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">2</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">3</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">4</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link pagination-next" href="#">
+                <span class="visually-hidden">Следующая страница</span>...
+              </a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">10</a>
+            </li>
+          </ul>
+        </section>
+        <!-----↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑  Пагинация..------------------------------------------->
 
-     <section class="subscription-white-background">
-      <h2 class="subscription-white">Подпишитесь на рассылку</h2>
-      <span class="subscription-benefit-white">
-        Только полезная информация и никакого спама,<br> честное бойскаутское!
-      </span>
-      <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-         <label class="visually-hidden">Email</label>
-         <input class="field-line" placeholder="Ваш e-mail" type="email" name="subscription-email" id="subscription-email" required>
-         <button class="subscription-button" type="submit">
-           <span class="button-label">Подписаться</span>
-         </button>
-      </form>
-     </section>
+        <section class="subscription-white-background">
+          <h2 class="subscription-white">Подпишитесь на рассылку</h2>
+          <span class="subscription-benefit-white">
+            Только полезная информация и никакого спама,<br> честное бойскаутское!
+          </span>
+          <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="visually-hidden">Email</label>
+            <input class="field-line" placeholder="Ваш e-mail" type="email" name="subscription-email" id="subscription-email"
+              required>
+            <button class="subscription-button" type="submit">
+              <span class="button-label">Подписаться</span>
+            </button>
+          </form>
+        </section>
+
+      </div>
     </main>
 
     <!-- ========================================== F O O T E R ======================================================================= -->
     <footer class="footer-index">
+
       <div class="footer-social">
+        <div class="shadow-mask"></div> <!-- маска, прячущая тень сверху блока футер -->
          <h2 class="visually-hidden">Город Седона в социальных сетях</h2>
          <span class="visually-hidden">Перейти в ВКонтакте</span>
          <a class="social-network-logo" href="https://vk.com/htmlacademy">
