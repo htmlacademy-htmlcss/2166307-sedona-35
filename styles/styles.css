@@ -121,6 +121,20 @@ fieldset {
   text-align: center;
 }
 
+.navigation-link:hover {
+  display: flex;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  padding: 19px 0;
+  margin-right: 32px;
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
 .navigation-link-current {
  border-bottom: 2px solid #756257;
 }
@@ -295,7 +309,6 @@ fieldset {
 
 .advantages-item:nth-child(1) {
   grid-area: real-city ;
-  /*background-color: #82B3D3;*/
   background-image: url("../images/background-real-city.svg");
   color: #ffffff;
   padding-top: 92px;
@@ -315,7 +328,6 @@ fieldset {
 
 .advantages-item:nth-child(4) {
   grid-area: nice-way ;
-  /*background: rgba(131, 179, 211, 0.2);*/
   background-image: url("../images/background-nice-way.svg");
   z-index: 20;
 }
@@ -384,112 +396,6 @@ fieldset {
   line-height: 21px;
   flex-wrap: wrap;
 }
-/*
-.advantages-illustrated.top {
-  display: flex;
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #82B3D3;
-  color: #ffffff;
-  margin-bottom: 103px;
-}
-
-.advantages-illustrated.bottom {
-  display: flex;
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #82B3D3;
-  color: #ffffff;
-  margin-bottom: 80px;
-}
-
-.advantages-comment {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.advantages-list {
-  display: flex;
-  width: 1200px;
-  margin: 0 auto;
-  background-color: #ffffff;
-  color:#000000;
-  align-items: center;
-}
-
-.advantages-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  text-align: center;
-  margin: 0 auto;
-  width: 400px;
-  background-color: #ffffff;
-  flex-wrap: wrap;
-}
-
-.advantages-title {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 172px;
-  align-items: center;
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-  list-style-type: none;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
-}
-
-.decorative-line {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 60px;
-  height: 2px;
-  background-color: rgba(0, 0, 0, 0.3);
-  margin-bottom: 30px;
-}
-
-.decorative-line.gray {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 60px;
-  height: 2px;
-  background-color: rgba(255, 255, 255, 0.3);
-  margin-bottom: 30px;
-}
-
-.advantages-description {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 230px;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  font-size: 18px;
-  line-height: 21px;
-  margin-bottom: 121px;
-  flex-wrap: wrap;
-}
-
-.sedona-town-view,
-.sedona-town-bridge {
-  margin: 0;
-}
-
-*/
 
 /*-↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-------------------БЛОК ADVANTAGES ---------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑--------*/
 
@@ -997,100 +903,79 @@ fieldset {
   flex-wrap: wrap;
 }
 
-.view-type-cards {
+.view-type-item {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  margin-left: 8px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.view-type-item:visited {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  margin-left: 8px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.view-type-item:hover {
   display: block;
   width: 48px;
   height: 48px;
   border: 2px solid #000000;
   border-radius: 4px;
   margin-left: 8px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.view-type-item:focus {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #68A2CA;
+  border-radius: 4px;
+  margin-left: 8px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  outline: none;
+}
+
+.view-type-item:active {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  margin-left: 8px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.view-type-item.cards {
   background-image: url("../images/view-icon-cards.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
-.view-type-single {
-  display: block;
-  width: 48px;
-  height: 48px;
-  border: 2px solid #E5E5E5;
-  border-radius: 4px;
-  margin-left: 8px;
+.view-type-item.single {
   background-image: url("../images/view-icon-single.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
-.view-type-list {
-  display: block;
-  width: 48px;
-  height: 48px;
-  border: 2px solid #E5E5E5;
-  border-radius: 4px;
-  margin-left: 8px;
+.view-type-item.list {
   background-image: url("../images/view-icon-list.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 /*-----↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-------------------ЗАГОЛОВОК КАТАЛОГА ОТЕЛЕЙ с опциями отображения----------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-----------------*/
 
 
 
-/*-----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓-------------------Пагинация в каталоге-----------------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓--------------------*/
-.pagination {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  width: 1060px;
-  height: 60px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  margin-bottom: 60px;
-}
-
-.pagination-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 60px;
-  font-size: 20px;
-  line-height: 36px;
-  font-weight: 700;
-  margin-right: 8px;
-  border-radius: 4px;
-  background-color: #82B3D3;
-}
-
-.pagination-item:nth-child(1) {
-  background-color: #F2F2F2;
-}
-
-.pagination-item:nth-child(5) {
-  background-color: #ffffff;
-}
-
-.pagination-link {
-  text-decoration: none;
-  text-align: center;
-  color: #ffffff;
-}
-
-.pagination-item:nth-child(1) .pagination-link {
-  color: #000000;
-}
-
-.pagination-item:nth-child(5) .pagination-link {
-  color: #000000;
-}
-
-
-/*-----↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-----------------Пагинация в каталоге ---------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-------------------------------*/
-
-
-
-/*-----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓---------------Карточки отелей catalog.html без фона--------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓----------------------------*/
+/*-----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓---------------Карточки отелей catalog.html  ----------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -------------------------------*/
 
 .catalog {
   display: flex;
@@ -1098,18 +983,6 @@ fieldset {
   margin: 0 auto;
   margin-bottom: 80px;
 }
-
-/*
-.hotel-list {
-  display: flex;
-  justify-content: flex-start; нужно использовать flex-start  ; чтобы использовать отступы добавим margin-right и margin-bottom ;
-  list-style: none;                /* li:nth-child(3n) - удалить отступ у каждого третьего элемента
-  width: 1060px;
-  margin: 0 auto;
-  padding: 0;
-  flex-wrap: wrap;
-}
-*/
 
 .hotel-list {
   display: grid;
@@ -1270,8 +1143,143 @@ fieldset {
   flex-wrap: wrap;
 }
 
+/*-----↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-----------------Карточки отелей catalog.html ---------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-------------------------------*/
 
-/*-----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓-------------------F O O T E R------------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓--------------------*/
+
+
+/*-----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓-------------------Пагинация в каталоге-----------------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓-------------------------*/
+.pagination {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  width: 1060px;
+  height: 60px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.pagination-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  margin-right: 8px;
+  border-radius: 4px;
+  background-color: rgba(130, 179, 211, 1);
+}
+
+.pagination-item:visited {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  margin-right: 8px;
+  border-radius: 4px;
+  background-color: rgba(130, 179, 211, 1);
+}
+
+.pagination-item:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  margin-right: 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(130, 179, 211, 1);
+  background-color: rgba(104, 162, 202, 1);
+  box-sizing: border-box;
+}
+
+.pagination-item:focus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  margin-right: 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(130, 179, 211, 1);
+  background-color: rgba(130, 179, 211, 1);
+  box-sizing: border-box;
+  outline: none;
+}
+
+
+.pagination-item:active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  margin-right: 8px;
+  border-radius: 4px;
+  background-color: rgba(130, 179, 211, 1);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.pagination-item:nth-child(1) {
+  background-color: #F2F2F2;
+}
+
+.pagination-item:nth-child(1):hover {
+border: 0;
+}
+
+.pagination-item:nth-child(5) {
+  background-color: #ffffff;
+}
+
+.pagination-item:nth-child(5):hover {
+  background-color: #ffffff;
+  border: 1px solid rgb(207, 221, 231); ;
+}
+
+
+
+.pagination-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+  text-align: center;
+  color: #ffffff;
+}
+
+.pagination-item:nth-child(1) .pagination-link {
+  color: #000000;
+}
+
+.pagination-item:nth-child(5) .pagination-link {
+  color: #000000;
+}
+
+
+/*-----↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-----------------Пагинация в каталоге --------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑---------------------------------*/
+
+
+
+/*-----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓-------------------  F O O T E R   ------------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓--------------------------------*/
 .footer-index {
   display: flex;
   width: 1200px;
@@ -1341,10 +1349,11 @@ fieldset {
   color: rgba(104, 162, 202, 1);
 }
 
-.social-network-logo.vk:focus-visible,
-.social-network-logo.telegram:focus-visible,
-.social-network-logo.youtube:focus-visible {
+.social-network-logo.vk:focus,
+.social-network-logo.telegram:focus,
+.social-network-logo.youtube:focus {
   color: rgba(104, 162, 202, 1);
+  outline: none;
 }
 
 .social-network-logo.vk:active,
@@ -1380,13 +1389,14 @@ fieldset {
   color: #756157;
 }
 
-.footer-contacts-phone:focus-visible {
+.footer-contacts-phone:focus {
   margin-top: auto;
   margin-bottom: auto;
   padding: 10px;
   text-decoration: none;
   text-align: center;
   color: #756157;
+  outline: none;
 }
 
 .footer-contacts-phone:active {
@@ -1422,12 +1432,13 @@ fieldset {
   color: #756157;
 }
 
-.partner-logo-link:focus-visible {
+.partner-logo-link:focus {
   text-align: right;
   text-decoration: none;
   margin: 0;
   margin-left: auto;
   color: #756157;
+  outline: none;
 }
 
 .partner-logo-link:active {
@@ -1448,4 +1459,4 @@ fieldset {
 }
 
 
-/*-----↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-------------------F O O T E R------------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑--------------------*/
+/*-----↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑------------------------- F O O T E R ------------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑------------------------*/
