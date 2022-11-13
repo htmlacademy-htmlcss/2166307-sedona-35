@@ -22,13 +22,13 @@
 
         <ul class="navigation-list">
           <li class="navigation-items">
-            <a class="navigation-link" href="index.html">Главная</a>
+            <a class="navigation-link  navigation-link-current" href="index.html">Главная</a>
           </li>
           <li class="navigation-items">
             <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-items">
-            <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
+            <a class="navigation-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
 
@@ -172,13 +172,13 @@
         <!---↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ --------  БЛОК    R E C O M M E N D A T I O N--------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑   -->
 
 
-        <!---↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓-----------  БЛОК   H O T E L    S E A R C H------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓    -->
+        <!---↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓----------- БЛОК   H O T E L    S E A R C H------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓    -->
         <section class="hotel-search">
           <h2 class="visually-hidden">Поиск отеля</h2>
           <b class="hotel-search-question">Заинтересовались?</b>
           <p class="hotel-search-action">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения
             гостиниц в Седоне</p>
-          <a class="hotel-search-button button-brown" href="#">Поиск гостиницы в Седоне</a>
+          <a class="hotel-search-button button-brown" href="#search-dialog">Поиск гостиницы в Седоне</a>
         </section>
 
       </div>
@@ -195,8 +195,8 @@
           <label class="visually-hidden">Email</label>
           <input class="field-line" placeholder="Ваш e-mail" type="email" name="subscription-email"
             id="subscription-email" required>
-          <button class="subscription-button" type="submit">
-            <span class="button-label button-blue">Подписаться</span>
+          <button class="subscription-button button-blue" type="submit">
+            <span class="button-label">Подписаться</span>
           </button>
         </form>
       </section>
@@ -204,7 +204,7 @@
     </main>
 
 
-    <!-- ========================================== F O O T E R ======================================================================= -->
+    <!-- ===========↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓=============== F O O T E R =========================↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓========================= -->
 
     <footer class="footer-index">
 
@@ -245,6 +245,57 @@
       </div>
 
     </footer>
+
+    <!-- =========== ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ =============== F O O T E R ======================== ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ====================== -->
+
+
+    <!---↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓-------------------  МОДАЛЬНОЕ   ОКНО  -------------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ --------------------------->
+
+    <div class="modal-container" id="search-dialog"> <!-- modal-container-close -->
+      <!-- <div class="modal modal-auth"> -->
+
+
+        <a class="modal-container-overlay" href="#"></a>
+
+        <div class="modal">
+        <!-- <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>  -->
+
+
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+
+            <p class="field-group">
+              <label class="field-label" for="arrival">Дата Заезда</label>
+              <input class="search-form-field" type="text" id="arrival" name="arrival-date" placeholder="27 апреля 2020">
+            </p>
+
+            <span class="arrival-message">Мы не можем отправить вас в прошлое.</span>
+
+            <p class="field-group">
+              <label class="field-label" for="departure">Дата Выезда</label>
+              <input class="search-form-field" type="text" id="departure" name="departure-date" placeholder="1 сентября 2023">
+            </p>
+
+            <span class="departure-message">На эти даты есть свободные номера. Пока есть.</span>
+
+            <p class="adults-children">
+              <span class="field-label">Взрослые</span>
+              <div class="adults-amont"></div>
+              <span class="field-label">Дети</span>
+              <div class="children-info"></div>
+              <div class="children-amont"></div>
+            </p>
+
+            <button class="search-dialog-button" type="submit">Найти</button>
+
+          </form>
+        </section>
+      </div>
+    </div>
+
   </body>
 
 </html>
