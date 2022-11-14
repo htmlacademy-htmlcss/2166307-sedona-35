@@ -119,9 +119,11 @@ fieldset {
   color: inherit;
   text-decoration: none;
   text-align: center;
+  transition: 0.4s linear;
 }
 
-.navigation-link:hover {
+.navigation-link:hover,
+.navigation-link:focus {
   display: flex;
   font-size: 20px;
   line-height: 24px;
@@ -131,8 +133,9 @@ fieldset {
   color: inherit;
   text-decoration: none;
   text-align: center;
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
+  transform: scale(1.06);
+  outline: none;
+ /* transition: transform 0.3s ease-in-out;*/
 }
 
 .navigation-link-current {
@@ -1685,7 +1688,6 @@ fieldset {
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
-  background-color: aqua;
 }
 
 .close-button {
@@ -1693,9 +1695,51 @@ fieldset {
   width: 52px;
   height: 52px;
   background-image: url("../images/modal-close.svg");
-  top: -20px;
+  top: 0;
   right: -20px;
+  opacity: 0.5;
+  transition: 0.3s linear;
 }
+
+
+.close-button:hover {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  background-image: url("../images/modal-close.svg");
+  top: 0;
+  right: -20px;
+  opacity: 1;
+  transform: scale(1.08);
+  transition: transform 0.3s ease-in-out;
+}
+
+.close-button:focus {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  background-image: url("../images/modal-close.svg");
+  top: 0;
+  right: -20px;
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+.close-button:active .plus-minus {
+  fill: #FFFFFF;
+}
+
+.close-button:active .children-info {
+  color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
 
 .field-group {
   display: flex;
@@ -1804,6 +1848,7 @@ fieldset {
  height: 48px;
  color: #83B3D3;
  margin-right: 46px;
+ transition: 0.3s linear;
 }
 
 .children-info:visited {
@@ -1838,14 +1883,8 @@ fieldset {
   color: #68A2CA;
   margin-right: 46px;
   transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
   outline: none;
  }
-
-
-
-
-/*fill="#756157" fill-opacity="0.3" - for minus and plus*/
 
 .adults-amont,
 .children-amont {
@@ -1858,20 +1897,31 @@ fieldset {
  border-radius: 4px;
 }
 
+
+
 .plus-minus {
   margin: 0 auto;
   color: #756157;
   opacity: 0.3;
+  transition: 0.3s linear;
 }
 
-.plus-minus:hover,
+.plus-minus:hover {
+margin: 0 auto;
+fill: #000000;
+transform: scale(1.4);
+transform: opacity(1);
+outline: none;
+transition: transform 0.3s ease-in-out;
+}
+
 .plus-minus:focus {
   margin: 0 auto;
   fill: #000000;
-  transform: scale(1.25);
+  transform: scale(1.4);
   transform: opacity(1);
-  transition: transform 0.3s ease-in-out;
   outline: none;
+  transition: transform 0.3s ease-in-out;
 }
 
 
