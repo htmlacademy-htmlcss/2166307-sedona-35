@@ -1671,6 +1671,7 @@ fieldset {
 .modal-content {
  display: flex;
  flex-direction: column;
+ position: relative;
 }
 
 .modal-title {
@@ -1684,18 +1685,28 @@ fieldset {
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+  background-color: aqua;
 }
 
+.close-button {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  background-image: url("../images/modal-close.svg");
+  top: -20px;
+  right: -20px;
+}
 
 .field-group {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 4px;
   line-height: 24px;
   font-weight: 700;
+  font-size: 20px;
   color: #000000;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 4px;
 }
 
 .search-form-field {
@@ -1703,28 +1714,28 @@ fieldset {
   flex-direction: column;
   flex-wrap: wrap;
   width: 440px;
-  font-weight: 700;
-  font-size: 20px;
+  height: 48px;
   line-height: 24px;
+  font-weight: 700;
+  font-size: 18px;
   padding: 0;
   border: 0;
   border-radius: 4px;
   background-color: #F2F2F2;
 }
 
-
 .arrival-message {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  margin: 0;
-  margin-bottom: 23px;
   justify-content: center;
   color: #FF5757;
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
+  margin: 0;
+  margin-bottom: 23px;
 }
 
 .departure-message {
@@ -1732,29 +1743,197 @@ fieldset {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  margin: 0;
-  margin-bottom: 23px;
   justify-content: center;
   color: #333333;
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
+  margin: 0;
+  margin-bottom: 23px;
 }
 
 .adults-children {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+
+.adults  {
+  display: flex;
+  flex-wrap: wrap;
+  width: 288.5px;
+}
+
+.children {
+  display: flex;
+  flex-wrap: wrap;
+  width: 177.5px;
 }
 
 .field-label {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   flex-wrap: wrap;
   width: 137px;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
 }
+
+.children-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  width: 91px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.children-info {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ width: 26px;
+ height: 48px;
+ color: #83B3D3;
+ margin-right: 46px;
+}
+
+.children-info:visited {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 26px;
+  height: 48px;
+  color: #83B3D3;
+  margin-right: 46px;
+ }
+
+ .children-info:hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 26px;
+  height: 48px;
+  color: #68A2CA;
+  margin-right: 46px;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  outline: none;
+ }
+
+ .children-info:focus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 26px;
+  height: 48px;
+  color: #68A2CA;
+  margin-right: 46px;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  outline: none;
+ }
+
+
+
+
+/*fill="#756157" fill-opacity="0.3" - for minus and plus*/
+
+.adults-amont,
+.children-amont {
+ display: grid;
+ align-items: center;
+ height: 48px;
+ width: 110px;
+ grid-template-columns: 40px 31px 40px;
+ background-color: #F2F2F2;
+ border-radius: 4px;
+}
+
+.plus-minus {
+  margin: 0 auto;
+  color: #756157;
+  opacity: 0.3;
+}
+
+.plus-minus:hover,
+.plus-minus:focus {
+  margin: 0 auto;
+  fill: #000000;
+  transform: scale(1.25);
+  transform: opacity(1);
+  transition: transform 0.3s ease-in-out;
+  outline: none;
+}
+
+
+
+.adults-amont-number,
+.children-amont-number {
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+  background-color: #F2F2F2;
+  padding: 0;
+  border: 0;
+  width: 31px;
+  height: 48px;
+  text-align: center;
+}
+
+.adults-amont-number:hover,
+.children-amont-number:hover,
+.adults-amont-number:focus,
+.children-amont-number:focus {
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000000;
+  background-color: #F2F2F2;
+  border: 1px solid #83B3D3;
+  border-radius: 4px;
+  padding: 0;
+  width: 31px;
+  height: 48px;
+  text-align: center;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/*убираем стрелки для поля number в Chrome*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*убираем стрелки для поля number в FireFox*/
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+
+/*убираем стрелки для поля number во всех остальных браузерах*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+ margin: 0;
+}
+
 
 .search-dialog-button {
   display: flex;
