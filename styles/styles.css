@@ -1963,6 +1963,7 @@ outline: none;
 }
 
 .field-group {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   line-height: 24px;
@@ -1989,30 +1990,46 @@ outline: none;
   background-color: #F2F2F2;
 }
 
+.search-form-field[placeholder] {
+  padding-left: 20px;
+  color: #000000;
+}
+
+.field-group::after {
+  position: absolute;
+  content: '';
+  top: 14px;
+  left: 537px;
+  background-image: url("../images/date.svg");
+  background-size: 20px 20px;
+  height: 20px;
+  width: 20px;
+
+}
+
 .arrival-message {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   color: #FF5757;
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
+  padding-left: 157px;
   margin: 0;
   margin-bottom: 23px;
+
 }
 
 .departure-message {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   color: #333333;
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
+  padding-left: 157px;
   margin: 0;
   margin-bottom: 23px;
 }
@@ -2041,7 +2058,6 @@ outline: none;
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
-  margin-right: 20px;
   width: 137px;
   font-weight: 700;
   font-size: 20px;
