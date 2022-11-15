@@ -758,81 +758,120 @@ fieldset {
 }
 
 
-.catalog-filter {
+.catalog-filter {   /* общий контейнер*/
   display: flex;
-  width: 1060px;
-  height: 160px;
+  width: 1060px;     /*далее все поле делим на 4 флекс контейнера,*/
+  height: 160px;      /*из них 1-ый и 2-ой сгруппированы в общий флекс контейнер */
   margin: 0 auto;
   margin-left: 70px;
 }
 
-
-.infrastructure-selection {
+.checkboks-radio-group {
+  display: flex;
+  width: 511px;
+}
+.catalog-filter-title {  /* Заголовки контейнеров*/
   display: flex;
   flex-direction: column;
   text-align: left;
-  width: 150.43px;
-  height: 157px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 32px;
+  color: #ffffff;
+  flex-wrap: wrap;
+}
+
+.infrastructure-selection {  /* ПЕРВЫЙ контейнер*/
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 180.43px;
+  margin: 0;
+  margin-right: 40px;
+  padding: 0;
+  border: 0;
+  flex-wrap: wrap;
+}
+
+.accomodation-type {    /* ВТОРОЙ контейнер*/
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 180.43px;
   margin: 0;
   padding: 0;
   border: 0;
+
 }
 
-.accomodation-type {
-  display: flex;
-  text-align: left;
-  width: 150.43px;
-  height: 157px;
-  margin-left: 70px;
-  border: 0;
-}
-
-.price-slider {
+.price-slider {       /* ТРЕТИЙ контейнер*/
   display: flex;
   flex-direction: column;
   width: 288px;
-  height: 160px;
-  margin-left: 167px;
+  margin-right: 70px;
 }
 
-.catalog-filter-title {
-  display: flex;
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 700;
-  color: #ffffff;
-}
 
-.submit-reset-buttons {
+
+
+.submit-reset-buttons {   /* ЧЕТВЕРТЫЙ контейнер*/
   display: flex;
   flex-direction: column;
+  width: 191px;
   justify-content: flex-end;
-  margin-left: 70px;
 }
+
+.catalog-filter-group {
+  display: grid;
+  grid-template-rows: 23px 23px 23px;
+  grid-template-columns: 20px auto;
+  gap: 16px;
+  align-items: center;
+  justify-items: start;
+  margin: 0;
+  padding: 0;
+}
+
+.control-input {
+  margin: 0;
+  width: 20px;
+  height: 20px;
+}
+
 
 .button-submit {
   display: flex;
-  text-align: center;
+  flex-direction: column;
+  align-items: center;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
   text-transform: uppercase;
   border: 0;
   border-radius: 4px;
+  padding: 8px 50px;
   background-color: #82B3D3;
   color: #ffffff;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
 }
 
 .button-reset {
   display: flex;
-  text-align: center;
+  flex-direction: column;
+  align-items: center;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
   text-transform: uppercase;
   background-color: transparent;
   border: 0;
+  border-radius: 4px;
+  padding: 5px 47px;
   color: #ffffff;
+  background-color: transparent;
+  flex-wrap: wrap;
 }
 
 .control {
@@ -843,7 +882,152 @@ fieldset {
 
 
 
-/*-----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓-------------------ЗАГОЛОВОК КАТАЛОГА ОТЕЛЕЙ с опциями отображения----------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓-----------------*/
+/*-----↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-------------------БЛОК ФИЛЬТРОВ КАТАЛОГА------------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑---------------------------------*/
+
+
+
+/*-----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓-------------------DOUBLE SLIDER---------------------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓---------------------------------*/
+
+
+*,
+*:before,
+*:after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins",sans-serif;
+}
+body{
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  background-color: #FFFFFF;
+  place-items: center;
+}
+.wrapper{
+  position: relative;
+  background-color: transparent;
+
+}
+.container{
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+input[type="range"]{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  outline: none;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  background-color: transparent;
+  pointer-events: none;
+}
+.slider-track{
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  border-radius: 5px;
+}
+input[type="range"]::-webkit-slider-runnable-track{
+  -webkit-appearance: none;
+  height: 5px;
+}
+input[type="range"]::-moz-range-track{
+  -moz-appearance: none;
+  height: 5px;
+}
+input[type="range"]::-ms-track{
+  appearance: none;
+  height: 5px;
+}
+input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  height: 1.7em;
+  width: 1.7em;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  margin-top: -9px;
+  pointer-events: auto;
+  border-radius: 50%;
+}
+input[type="range"]::-moz-range-thumb{
+  -webkit-appearance: none;
+  height: 1.7em;
+  width: 1.7em;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  pointer-events: auto;
+}
+input[type="range"]::-ms-thumb{
+  appearance: none;
+  height: 1.7em;
+  width: 1.7em;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  pointer-events: auto;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb,
+input[type="range"]:focus::-webkit-slider-thumb,
+input[type="range"]:active::-webkit-slider-thumb {
+  background-color: #E6E6E6;
+  border: 3px solid #83B3D3;
+}
+
+.values{
+  display: flex;
+  width: 288px;
+  height: 48px;
+  background-color: transparent;
+  position: relative;
+  border-radius: 4px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  margin: 0;
+}
+
+.block-from,
+.block-to {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ width: 143px;
+ height: 48px;
+ background-color:  #F2F2F2;
+ padding-left: 20px;
+ padding-right: 20px;
+}
+
+.block-from {
+ margin-right: 2px;
+}
+
+.range-from,
+.range-to {
+ color: #c2c2c2;
+ font-weight: 400;
+ font-size: 18px;
+ line-height: 24px;
+}
+
+/*-----↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-------------------DOUBLE SLIDER------------------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑---------------------------------*/
+
+
+
+/*-----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓-------------------ЗАГОЛОВОК КАТАЛОГА ОТЕЛЕЙ с опциями отображения----------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓--------------*/
 
 
 .catalog-container {
@@ -1623,7 +1807,53 @@ fieldset {
   color: #FFFFFF;
  }
 
- /*-----↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑------------------------- Стилизация КНОПОК ----------------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑--------------*/
+
+.field {
+background-color: #FFFFFF;
+color: #000000;
+outline: none;
+}
+
+.field:hover,
+.field:focus {
+  background-color: #E6E6E6;
+  color: #000000;
+  outline: none;
+  }
+
+  .button-transparent {
+    color: #FFFFFF;
+    border: 3px solid transparent;
+    outline: none;
+  }
+
+  .button-transparent:visited {
+    color: #FFFFFF;
+    border: 3px solid transparent;
+    outline: none;
+  }
+
+  .button-transparent:hover {
+    opacity: 0.8;
+    border: 3px solid transparent;
+    outline: none;
+  }
+
+  .button-transparent:focus {
+    color: #FFFFFF;
+    border: 3px solid #83B3D3;
+    outline: none;
+  }
+
+  .button-transparent:disabled {
+    color: #FFFFFF;
+    border: 3px solid transparent;
+    opacity: 0.25;
+    outline: none;
+  }
+
+
+ /*-----↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑------------------------- Стилизация КНОПОК и полей --------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑--------------*/
 
 
 
@@ -1726,20 +1956,12 @@ fieldset {
 }
 
 .close-button:active .plus-minus {
-  fill: #FFFFFF;
+  opacity: 0.1;
 }
 
 .close-button:active .children-info {
-  color: #FFFFFF;
+  opacity: 0.1;
 }
-
-
-
-
-
-
-
-
 
 .field-group {
   display: flex;
@@ -1757,7 +1979,7 @@ fieldset {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 440px;
+  width: 420px;
   height: 48px;
   line-height: 24px;
   font-weight: 700;
@@ -1820,6 +2042,7 @@ fieldset {
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
+  margin-right: 20px;
   width: 137px;
   font-weight: 700;
   font-size: 20px;
@@ -1896,8 +2119,6 @@ fieldset {
  background-color: #F2F2F2;
  border-radius: 4px;
 }
-
-
 
 .plus-minus {
   margin: 0 auto;
