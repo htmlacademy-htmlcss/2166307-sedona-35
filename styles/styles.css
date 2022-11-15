@@ -2048,6 +2048,7 @@ outline: none;
 }
 
 .children {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 177.5px;
@@ -2079,14 +2080,14 @@ outline: none;
 }
 
 .children-info {
- display: flex;
- flex-direction: column;
- justify-content: center;
- width: 26px;
- height: 48px;
- color: #83B3D3;
- margin-right: 46px;
- transition: 0.3s linear;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 26px;
+  height: 48px;
+  margin-right: 46px;
+  color: #83B3D3;
+  opacity: 0.75;
 }
 
 .children-info:visited {
@@ -2107,9 +2108,21 @@ outline: none;
   height: 48px;
   color: #68A2CA;
   margin-right: 46px;
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
   outline: none;
+  opacity: 1;
+ }
+
+ .children-info:hover::after {
+  position: absolute;
+  content: '';
+  top: 42px;
+  left: -9px;
+  background-image: url("../images/children-info-hover.svg");
+  background-repeat: no-repeat;
+  background-size: 256px 152px;
+  width: 256px;
+  height: 152px;
+  opacity: 1;
  }
 
  .children-info:focus {
@@ -2120,7 +2133,6 @@ outline: none;
   height: 48px;
   color: #68A2CA;
   margin-right: 46px;
-  transform: scale(1.05);
   outline: none;
  }
 
