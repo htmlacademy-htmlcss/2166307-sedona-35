@@ -28,5 +28,5 @@ function slideTwo(){
 function fillColor(){
     percent1 = (sliderOne.value / sliderMaxValue) * 100;
     percent2 = (sliderTwo.value / sliderMaxValue) * 100;
-    sliderTrack.style.background = `linear-gradient(to right, #FFFFFF ${percent1}% , #FFFFFF ${percent1}% , #FFFFFF ${percent2}%, #686868 ${percent2}%)`;
+    sliderTrack.style.background = `linear-gradient(to right, #686868 ${percent1}% , #FFFFFF ${percent1}% , #FFFFFF ${percent2}%, #686868 ${percent2}%)`;
 }

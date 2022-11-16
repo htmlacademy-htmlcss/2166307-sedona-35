@@ -844,14 +844,28 @@ fieldset {
   justify-items: start;
   margin: 0;
   padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .control-input {
-  margin: 0;
+  position: relative;
   width: 20px;
   height: 20px;
+  opacity: 1;
 }
 
+.control-input::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+
+}
 
 .button-submit {
   display: flex;
