@@ -731,18 +731,63 @@ fieldset {
   height: 21px;
 }
 
-
 .breadcrumbs-item {
   display: flex;
   margin-right: 10px;
 }
 
+.breadcrumbs-item:nth-child(1)>.breadcrumbs-link {
+  color: transparent;
+}
+
+.breadcrumbs-item:nth-child(odd):hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.breadcrumbs-item:nth-child(odd):focus {
+  outline: none;
+  cursor: pointer;
+ }
+
+.breadcrumbs-item:nth-child(odd):active {
+  opacity: 0.3;
+  cursor: pointer;
+ }
+
 .breadcrumbs-link {
+  display: inline-block;
   font-size: 16px;
   line-height: 21px;
   text-decoration: none;
   color: #ffffff;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*-----↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-------------------BREADCRUMBS------------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑--------------------*/
 
