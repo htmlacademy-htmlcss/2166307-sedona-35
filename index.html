@@ -197,11 +197,11 @@
           Только полезная информация и никакого спама,<br> честное бойскаутское!
         </span>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="visually-hidden">Email</label>
+          <label class="visually-hidden" for="subscription-email">Адрес электронной почты для рассылки.</label>
           <input class="field-line field" placeholder="Ваш e-mail" type="email" name="subscription-email"
             id="subscription-email" required>
           <button class="subscription-button button-blue" type="submit">
-            <span class="button-label">Подписаться</span>
+            Подписаться
           </button>
         </form>
       </section>
@@ -300,7 +300,7 @@
                       <path d="M3 9V11H17V9H3Z" />
                     </svg>
 
-
+                   <label class="visually-hidden" for="adults-amont">Количество взрослых.</label>
                   <input class="adults-amont-number" type="number" step="1" min="1" max="10" id="adults-amont"
                     name="adults-qty" placeholder="2">
 
@@ -334,12 +334,9 @@
                     <path d="M3 9V11H17V9H3Z" />
                   </svg>
 
-
-                <div class="children-amont-number-container">
+                  <label class="visually-hidden" for="children-amont">Количество детей.</label>
                   <input class="children-amont-number" type="number" step="1" min="0" max="10" id="children-amont"
                     name="children-qty" placeholder="2">
-                </div>
-
 
                   <svg class="plus-minus" width="20" height="48" viewBox="0 0 20 20" fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg">

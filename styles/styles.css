@@ -44,11 +44,7 @@ img {
   /* изображениями неподходящего размера */
 }
 
-fieldset {
-  border: 0;
-  padding: 0;
-  margin: 0;
-}
+
 
 .main-page {
   flex-grow: 1;
@@ -764,31 +760,6 @@ fieldset {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*-----↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-------------------BREADCRUMBS------------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑--------------------*/
 
 
@@ -813,7 +784,6 @@ fieldset {
   /* общий контейнер*/
   display: flex;
   width: 1060px;
-  height: 160px;
   margin: 0 auto;
   margin-left: 70px;
 }
@@ -877,7 +847,7 @@ fieldset {
   display: flex;
   flex-direction: column;
   width: 191px;
-  justify-content: flex-end;
+  padding-top:  56px;
 }
 
 .catalog-filter-group {
@@ -909,7 +879,6 @@ fieldset {
   width: 20px;
   height: 20px;
   background-color: red;
-
 }
 
 .button-submit {

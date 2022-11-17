@@ -70,7 +70,7 @@
               </a>
             </li>
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link">></a>
+              <span class="breadcrumbs-link">></span>
             </li>
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="catalog.html">Гостиницы</a>
@@ -129,7 +129,6 @@
             </div>
             <!----↓ ↓ ↓ ↓ ↓ ↓ ↓  Double Slider  задающий диапазон цены ..-->
 
-
             <div class="price-slider">
               <div class="catalog-filter-title">Стоимость,₽:</div>
 
@@ -159,8 +158,10 @@
 
                 <div class="container">
                   <div class="slider-track"></div>
-                    <input type="range" min="0" max="30000" value="0" id="slider-1" step="100" oninput="slideOne()">
-                    <input type="range" min="0" max="30000" value="9000" id="slider-2" step="100" oninput="slideTwo()">
+                    <label class="visually-hidden" for="min-price">Минимальная стоимость бронирования.</label>
+                    <input  type="range" min="0" max="30000" value="0" id="slider-1" step="100" oninput="slideOne()" id="min-price">
+                    <label class="visually-hidden" for="max-price">Максимальная стоимость бронирования.</label>
+                    <input type="range" min="0" max="30000" value="9000" id="slider-2" step="100" oninput="slideTwo()" id="max-price">
                   </div>
                 </div>
 
@@ -351,11 +352,11 @@
             Только полезная информация и никакого спама,<br> честное бойскаутское!
           </span>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="visually-hidden">Email</label>
+            <label class="visually-hidden" for="subscription-email">Адрес электронной почты для рассылки.</label>
             <input class="field-line field" placeholder="Ваш e-mail" type="email" name="subscription-email"
               id="subscription-email" required>
             <button class="subscription-button button-blue" type="submit">
-              <span class="button-label">Подписаться</span>
+              Подписаться
             </button>
           </form>
         </section>
