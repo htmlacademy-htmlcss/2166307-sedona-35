@@ -38,10 +38,9 @@ body {
 }
 
 img {
+  /* нормализация тега IMG */
   max-width: 100%;
-  /*защита от поломки макета */
-  height: auto;
-  /* изображениями неподходящего размера */
+  object-fit: contain;
 }
 
 
@@ -134,7 +133,7 @@ img {
   text-align: center;
   transform: scale(1.06);
   outline: none;
-  /* transition: transform 0.3s ease-in-out;*/
+  color: #757575;
 }
 
 .navigation-link-current {
@@ -793,6 +792,7 @@ img {
   background-image: url("../images/bg-catalog.jpg");
   background-repeat: no-repeat;
   background-size: 1200px 412px;
+  background-color: #68A2CA;
   z-index: 1;
 }
 
@@ -1815,21 +1815,24 @@ input[type="range"]:active::-webkit-slider-thumb {
 
 .button-brown:visited {
   background-color: #756157;
+  transform: scale(1);
 }
 
 .button-brown:hover {
   background-color: #615048;
-  transform: none;
+  transform: scale(1);
 }
 
 .button-brown:focus {
   background-color: #615048;
   outline: none;
+  transform: scale(1);
 }
 
 .button-brown:active {
   background-color: #756157;
   color: rgba(255, 255, 255, 0.3);
+  transform: scale(1);
 }
 
 .button-blue:visited {
