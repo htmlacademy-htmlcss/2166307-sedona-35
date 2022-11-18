@@ -721,10 +721,11 @@ img {
 .breadcrumbs-item:nth-child(1) {
   display: block;
   background-image: url("../images/small-home.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
   width: 13px;
   height: 21px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
 }
 
 .breadcrumbs-item {
@@ -732,32 +733,48 @@ img {
   margin-right: 10px;
 }
 
-.breadcrumbs-item:nth-child(1)>.breadcrumbs-link {
-  color: transparent;
+.breadcrumbs-item:not(:first-child)::before {
+  position: inline-block;
+  content: '';
+  display: flex;
+  align-items: center;
+  width: 8px;
+  height: 21px;
+  background-image: url("../images/breadcrumbs-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #FFFFFF;
+  margin-right: 10px;
 }
-
-.breadcrumbs-item:nth-child(odd):hover {
-  opacity: 0.6;
-  cursor: pointer;
-}
-
-.breadcrumbs-item:nth-child(odd):focus {
-  outline: none;
-  cursor: pointer;
- }
-
-.breadcrumbs-item:nth-child(odd):active {
-  opacity: 0.3;
-  cursor: pointer;
- }
 
 .breadcrumbs-link {
-  display: inline-block;
+  position: relative;
+  display: flex;
   font-size: 16px;
   line-height: 21px;
   text-decoration: none;
   color: #ffffff;
 }
+.breadcrumbs-item:first-child>.breadcrumbs-link {
+  color: transparent;
+}
+
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.breadcrumbs-link:focus {
+  outline: none;
+  cursor: pointer;
+ }
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
+  cursor: pointer;
+ }
+
+
 
 
 /*-----↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑-------------------BREADCRUMBS------------------------↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑--------------------*/
