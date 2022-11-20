@@ -1822,10 +1822,10 @@ input[type="range"]:active::-webkit-slider-thumb {
 .shadow-mask {
   position: absolute;
   width: 1200px;
-  height: 40px;
+  height: 60px;
   background-color: #ffffff;
   transform: translateY(2100px) translateX(-70px);
-  top: 10px;
+  top: -40px;
 }
 
 
@@ -1833,6 +1833,7 @@ input[type="range"]:active::-webkit-slider-thumb {
 
 
 /*-----↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓------------------------- Стилизация КНОПОК ------------------↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -----------------------*/
+
 
 .button-brown:visited {
   background-color: #756157;
@@ -1854,6 +1855,7 @@ input[type="range"]:active::-webkit-slider-thumb {
   background-color: #756157;
   color: rgba(255, 255, 255, 0.3);
   transform: scale(1);
+  transition: 0.01ms linear;
 }
 
 .button-blue:visited {
