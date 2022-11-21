@@ -107,6 +107,7 @@
                   <input class="control-input third-box" type="checkbox" name="wifi" id="internet">
                   <label class="control-checkbox third-box" for="internet">Wi-Fi</label>
 
+
                 </div>
 
               </div>
@@ -116,11 +117,12 @@
                 <div class="catalog-filter-title">Тип Жилья:</div>
                 <div class="catalog-filter-group">
 
-                  <input class="control-input first-radio" type="radio" name="accommodation-type" value="hotel" id="flat-type"
-                    checked>
+                  <input class="control-input first-radio" type="radio" name="accommodation-type" value="hotel"
+                    id="flat-type" checked>
                   <label class="control-radio first-radio" for="flat-type">Гостиница</label>
 
-                  <input class="control-input second-radio" type="radio" name="accommodation-type" value="motel" id="motel-type">
+                  <input class="control-input second-radio" type="radio" name="accommodation-type" value="motel"
+                    id="motel-type">
                   <label class="control-radio second-radio" for="motel-type">Мотель</label>
 
 
@@ -140,46 +142,48 @@
 
                 <div class="values">
 
-                 <div class="block-from field">
+                  <div class="block-from field">
                     <span id="range1">
                       0
                     </span>
                     <span class="range-from">
                       от
                     </span>
-                 </div>
+                  </div>
 
-                 <div class="block-to field">
+                  <div class="block-to field">
                     <span id="range2">
                       9000
                     </span>
                     <span class="range-to">
                       до
                     </span>
-                 </div>
-               </div>
+                  </div>
+                </div>
 
 
                 <div class="container">
                   <div class="slider-track"></div>
-                    <label class="visually-hidden" for="slider-1">Минимальная стоимость бронирования.</label>
-                    <input  type="range" name="min-price" min="0" max="30000" value="0" id="slider-1" step="100" oninput="slideOne()">
-                    <label class="visually-hidden" for="slider-2">Максимальная стоимость бронирования.</label>
-                    <input type="range" name="max-price" min="0" max="30000" value="9000" id="slider-2" step="100" oninput="slideTwo()">
-                  </div>
+                  <label class="visually-hidden" for="slider-1">Минимальная стоимость бронирования.</label>
+                  <input type="range" name="min-price" min="0" max="30000" value="0" id="slider-1" step="100"
+                    oninput="slideOne()">
+                  <label class="visually-hidden" for="slider-2">Максимальная стоимость бронирования.</label>
+                  <input type="range" name="max-price" min="0" max="30000" value="9000" id="slider-2" step="100"
+                    oninput="slideTwo()">
                 </div>
-
               </div>
+
+            </div>
 
 
 
 
             <!---↑ ↑ ↑ ↑ ↑ ↑ ↑  Double Slider  задающий диапазон цены ..-->
 
-                <div class="submit-reset-buttons">
-                  <button class="button-submit button-blue" type="submit">Применить</button>
-                  <button class="button-reset button-transparent" type="reset">Сбросить</button>
-                </div>
+            <div class="submit-reset-buttons">
+              <button class="button-submit button-blue" type="submit">Применить</button>
+              <button class="button-reset button-transparent" type="reset">Сбросить</button>
+            </div>
 
           </form>
         </section>
@@ -203,6 +207,31 @@
             </select>
           </div>
 
+          <!----------------------------------------------------------------------------------------->
+
+          <form class="view-type">
+
+            <div>
+              <input class="view-type-item cards" type="radio" name="catalog-view-type" value="cards" id="cards-type" checked>
+              <label class="view-control-radio cards" for="cards-type"> <span class="visually-hidden">Показать
+                  карточки.</span></label>
+            </div>
+            <div>
+              <input class="view-type-item single" type="radio" name="catalog-view-type" value="single" id="single-type">
+              <label class="view-control-radio single" for="single-type"><span class="visually-hidden">Показать по
+                  отдельности.</span> </label>
+            </div>
+            <div>
+              <input class="view-type-item list" type="radio" name="catalog-view-type" value="list" id="list-type">
+              <label class="view-control-radio list" for="list-type"><span class="visually-hidden">Показать список.</span></label>
+            </div>
+
+          </form>
+
+
+
+          <!---
+
           <div class="view-type">
             <a href="#" class="view-type-item cards">
               <span class="visually-hidden">Показать карточки</span>
@@ -214,6 +243,8 @@
               <span class="visually-hidden">Показать список</span>
             </a>
           </div>
+
+          --->
 
         </section>
         <!---  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑     ЗАГОЛОВОК КАТАЛОГА ОТЕЛЕЙ с опциями отображения  ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ---------------->
