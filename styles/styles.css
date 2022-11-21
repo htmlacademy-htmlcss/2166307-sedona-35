@@ -791,14 +791,14 @@ img {
   flex-direction: column;
   margin: 0 auto;
   width: 1200px;
-  height: 412px;
+  height: 412px;                                                   /* ПОПРАВИТЬ ВЫСОТУ ФОРМЫ */
   background-image: url("../images/bg-catalog.jpg");
   background-repeat: no-repeat;
+  background-position: center center;
   background-size: 1200px 412px;
   background-color: #92b7cf;
   z-index: 1;
 }
-
 
 .catalog-filter {
   /* общий контейнер*/
@@ -848,7 +848,6 @@ img {
   margin: 0;
   padding: 0;
   border: 0;
-
 }
 
 .price-slider {
@@ -858,9 +857,6 @@ img {
   width: 288px;
   margin-right: 70px;
 }
-
-
-
 
 .submit-reset-buttons {
   /* ЧЕТВЕРТЫЙ контейнер*/
@@ -873,7 +869,7 @@ img {
 .catalog-filter-group {
   display: grid;
   grid-template-rows: 23px 23px 23px;
-  grid-template-columns: 20px auto;
+  grid-template-columns: 23px auto;
   gap: 16px;
   align-items: center;
   justify-items: start;
@@ -886,19 +882,9 @@ img {
 }
 
 .control-input {
-  position: relative;
   width: 20px;
   height: 20px;
-  opacity: 1;
-}
-
-.control-input::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  background-color: red;
+  opacity: 0;
 }
 
 .button-submit {
@@ -943,11 +929,123 @@ img {
   flex-wrap: wrap;
 }
 
-.control {
+.control-checkbox,
+.control-radio {
+  position: relative;
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
   color: #ffffff;
+
+}
+
+.control-checkbox::before {
+  position: absolute;
+  content: '';
+  top: 1.5px;
+  left: -35px;
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  z-index: 2;
+}
+
+.control-radio::before {
+  position: absolute;
+  content: '';
+  top: 1.5px;
+  left: -34px;
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  z-index: 3;
+}
+
+.control-input.first-box:checked ~ .control-checkbox.first-box::before,
+.control-input.second-box:checked ~ .control-checkbox.second-box::before,
+.control-input.third-box:checked ~ .control-checkbox.third-box::before
+ {
+  position: absolute;
+  content: '';
+  top: 1.5px;
+  left: -35px;
+  display: block;
+  background-image: url("../images/box-checked.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 20px;
+  width: 20px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+}
+
+.control-input.first-box:hover ~ .control-checkbox.first-box,
+.control-input.second-box:hover ~ .control-checkbox.second-box,
+.control-input.third-box:hover ~ .control-checkbox.third-box
+ {
+  opacity: 0.6;
+}
+
+.control-input.first-box:focus ~ .control-checkbox.first-box::after,
+.control-input.second-box:focus ~ .control-checkbox.second-box::after,
+.control-input.third-box:focus ~ .control-checkbox.third-box::after
+ {
+  position: absolute;
+  content: '';
+  top: -1.5px;
+  left: -38px;
+  display: block;
+  height: 18px;
+  width: 18px;
+  border-radius: 4px;
+
+  border: 4px solid #83B3D3;
+}
+
+.control-input.first-radio:checked ~ .control-radio.first-radio::before,
+.control-input.second-radio:checked ~ .control-radio.second-radio::before,
+.control-input.third-radio:checked ~ .control-radio.third-radio::before
+  {
+  position: absolute;
+  content: '';
+  top: 1.5px;
+  left: -34px;
+  display: block;
+  background-image: url("../images/radio-checked.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+
+
+}
+
+.control-input.first-radio:hover ~ .control-radio.first-radio,
+.control-input.second-radio:hover ~ .control-radio.second-radio,
+.control-input.third-radio:hover ~ .control-radio.third-radio
+ {
+  opacity: 0.6;
+}
+
+.control-input.first-radio:focus ~ .control-radio.first-radio::before,
+.control-input.second-radio:focus ~ .control-radio.second-radio::before,
+.control-input.third-radio:focus ~ .control-radio.third-radio::before
+{
+  position: absolute;
+  content: '';
+  top: -1.5px;
+  left: -37px;
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 3px solid #83B3D3;
 }
 
 
@@ -1090,8 +1188,6 @@ input[type="range"]:active::-webkit-slider-thumb {
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
 }
-
-
 
 .range-from,
 .range-to {
