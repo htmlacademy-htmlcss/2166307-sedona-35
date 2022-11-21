@@ -962,7 +962,7 @@ img {
   width: 20px;
   border-radius: 50%;
   background-color: #FFFFFF;
-  z-index: 3;
+
 }
 
 .control-input.first-box:checked ~ .control-checkbox.first-box::before,
@@ -1002,8 +1002,14 @@ img {
   height: 18px;
   width: 18px;
   border-radius: 4px;
-
   border: 4px solid #83B3D3;
+}
+
+.control-input.first-box:active ~ .control-checkbox.first-box,
+.control-input.second-box:active ~ .control-checkbox.second-box,
+.control-input.third-box:active ~ .control-checkbox.third-box
+ {
+  opacity: 0.2;
 }
 
 .control-input.first-radio:checked ~ .control-radio.first-radio::before,
@@ -1022,8 +1028,6 @@ img {
   width: 20px;
   border-radius: 50%;
   background-color: #FFFFFF;
-
-
 }
 
 .control-input.first-radio:hover ~ .control-radio.first-radio,
@@ -1046,6 +1050,13 @@ img {
   width: 20px;
   border-radius: 50%;
   border: 3px solid #83B3D3;
+}
+
+.control-input.first-radio:active ~ .control-radio.first-radio,
+.control-input.second-radio:active ~ .control-radio.second-radio,
+.control-input.third-radio:active ~ .control-radio.third-radio
+ {
+  opacity: 0.2;
 }
 
 
